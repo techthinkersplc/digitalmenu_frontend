@@ -10,6 +10,20 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* 🔔 ADDED CUSTOM KEYFRAMES FOR THE ANIMATIONS */
+  @keyframes slideIn {
+    0% { transform: translateY(-20px) scale(0.95); opacity: 0; }
+    100% { transform: translateY(0) scale(1); opacity: 1; }
+  }
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  /* 🛠️ ADDED THE CORRESPONDING TAILWIND v4 UTILITY CLASSES */
+  --animate-slide-in: slideIn 0.25s ease-out forwards;
+  --animate-fade-in: fadeIn 0.2s ease-out forwards;
 }
 
 @media (prefers-color-scheme: dark) {
