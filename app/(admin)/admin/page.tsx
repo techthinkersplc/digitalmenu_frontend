@@ -43,14 +43,14 @@ export default function AdminLogin() {
   };
 
   return (
-    <div className="flex min-h-screen items-center justify-center p-4 bg-zinc-950 text-white font-sans">
-      <div className="w-full max-w-md rounded-[2rem] border border-zinc-800 bg-zinc-900/50 backdrop-blur-md p-8 shadow-2xl">
+    <div className="flex min-h-screen items-center justify-center p-4 bg-[#1e1612] text-white font-sans">
+      <div className="w-full max-w-md rounded-[2rem] border border-white/5 bg-[#281f1a]/90 backdrop-blur-md p-8 shadow-2xl">
         <div className="mb-8 text-center">
           {/* 🍽 Updated Branding matching Caramel Kitchen */}
-          <h2 className="text-3xl font-black tracking-tight uppercase italic">
-            Caramel <span className="text-emerald-500">Kitchen</span>
+          <h2 className="text-3xl font-black tracking-tight uppercase italic text-white">
+            Z-Tshay <span className="text-[#e67e22]">Kitchen</span>
           </h2>
-          <p className="mt-2 text-xs font-bold uppercase tracking-widest text-zinc-500">
+          <p className="mt-2 text-xs font-bold uppercase tracking-widest text-stone-500">
             Admin Dashboard Portal
           </p>
         </div>
@@ -63,7 +63,7 @@ export default function AdminLogin() {
 
         <form onSubmit={handleSubmit} className="space-y-5">
           <div>
-            <label className="block text-xs font-black uppercase tracking-widest text-zinc-400 mb-2">
+            <label className="block text-xs font-black uppercase tracking-widest text-stone-400 mb-2">
               Email Address
             </label>
             <input
@@ -72,13 +72,13 @@ export default function AdminLogin() {
               autoComplete="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full rounded-2xl border border-zinc-800 bg-zinc-950 px-5 py-3.5 text-white placeholder-zinc-600 focus:border-emerald-500 focus:outline-none transition-all"
+              className="w-full rounded-2xl border border-white/5 bg-[#1e1612] px-5 py-3.5 text-white placeholder-stone-600 focus:border-[#e67e22]/50 focus:outline-none transition-all"
               placeholder="admin@caramelkitchen.com"
             />
           </div>
 
           <div>
-            <label className="block text-xs font-black uppercase tracking-widest text-zinc-400 mb-2">
+            <label className="block text-xs font-black uppercase tracking-widest text-stone-400 mb-2">
               Password
             </label>
             <div className="relative">
@@ -88,13 +88,13 @@ export default function AdminLogin() {
                 autoComplete="current-password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full rounded-2xl border border-zinc-800 bg-zinc-950 pl-5 pr-12 py-3.5 text-white placeholder-zinc-600 focus:border-emerald-500 focus:outline-none transition-all"
+                className="w-full rounded-2xl border border-white/5 bg-[#1e1612] pl-5 pr-12 py-3.5 text-white placeholder-stone-600 focus:border-[#e67e22]/50 focus:outline-none transition-all"
                 placeholder="••••••••"
               />
               <button
                 type="button"
                 onClick={() => setShowPassword(!showPassword)}
-                className="absolute right-4 top-1/2 -translate-y-1/2 text-[10px] uppercase font-black tracking-wider text-zinc-500 "
+                className="absolute right-4 top-1/2 -translate-y-1/2 text-[10px] uppercase font-black tracking-wider text-stone-500 "
               >
                 {showPassword ? "Hide" : "Show"}
               </button>
@@ -103,7 +103,7 @@ export default function AdminLogin() {
           <button
             type="submit"
             disabled={isLoading}
-            className="w-full mt-2 rounded-2xl bg-emerald-600 py-4 font-bold text-xs uppercase tracking-widest text-white hover:bg-emerald-500 disabled:opacity-50 transition-all shadow-lg shadow-emerald-900/20"
+            className="w-full mt-2 rounded-2xl bg-[#e67e22] py-4 font-bold text-xs uppercase tracking-widest text-white hover:bg-[#d35400] disabled:opacity-50 transition-all shadow-lg shadow-black/20"
           >
             {isLoading ? (
               <span className="flex items-center justify-center gap-2">

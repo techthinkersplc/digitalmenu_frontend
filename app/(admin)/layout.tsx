@@ -123,30 +123,30 @@ export default function AdminLayout({
 
   if (isAuthenticated === null) return null;
   return (
-    <div className="min-h-screen bg-zinc-950 text-zinc-100 antialiased">
+    <div className="min-h-screen bg-[#0d0a08] text-stone-100 antialiased">
       {isAuthenticated && pathname !== "/admin" && (
-        <header className="border-b border-zinc-800 bg-zinc-900/50 px-6 py-4 backdrop-blur-sm sticky top-0 z-40">
+        <header className="border-b border-stone-800 bg-stone-900/50 px-6 py-4 backdrop-blur-sm sticky top-0 z-40">
           <div className="flex items-center justify-between">
-            <h1 className="text-xl font-bold tracking-tight text-emerald-400">Admin Panel</h1>
+            <h1 className="text-xl font-bold tracking-tight text-orange-400">Admin Panel</h1>
 
             <div className="relative" ref={dropdownRef}>
               <button
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                className="flex items-center gap-3 bg-zinc-900 border border-zinc-800 hover:border-zinc-700 px-3 py-1.5 rounded-full transition"
+                className="flex items-center gap-3 bg-stone-900 border border-stone-800 hover:border-stone-700 px-3 py-1.5 rounded-full transition"
               >
-                <div className="h-7 w-7 rounded-full bg-emerald-500 flex items-center justify-center text-zinc-950 font-bold text-xs">A</div>
-                <span className="text-sm font-medium text-zinc-300 hidden sm:inline">profile</span>
+                <div className="h-7 w-7 rounded-full bg-[#e67e22] flex items-center justify-center text-white font-bold text-xs">A</div>
+                <span className="text-sm font-medium text-stone-300 hidden sm:inline">profile</span>
               </button>
 
               {isDropdownOpen && (
-                <div className="absolute right-0 mt-2 w-56 rounded-xl border border-zinc-800 bg-zinc-900 p-2 shadow-2xl animate-in fade-in slide-in-from-top-1 duration-150">
+                <div className="absolute right-0 mt-2 w-56 rounded-xl border border-stone-800 bg-stone-900 p-2 shadow-2xl animate-in fade-in slide-in-from-top-1 duration-150">
                   <button
                     onClick={() => { setIsDropdownOpen(false); setIsPasswordModalOpen(true); }}
-                    className="w-full text-left px-3 py-2 text-sm text-zinc-300 hover:bg-zinc-800 rounded-lg transition"
+                    className="w-full text-left px-3 py-2 text-sm text-stone-300 hover:bg-stone-800 rounded-lg transition"
                   >
                     Change Password
                   </button>
-                  <div className="border-t border-zinc-800 my-1"></div>
+                  <div className="border-t border-stone-800 my-1"></div>
                   <button
                     onClick={handleLogout}
                     className="w-full text-left px-3 py-2 text-sm font-medium text-red-400 hover:bg-red-500/10 rounded-lg transition"
@@ -165,10 +165,10 @@ export default function AdminLayout({
       {/* PASSWORD MODAL */}
       {isPasswordModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4">
-          <div className="w-full max-w-md bg-zinc-900 border border-zinc-800 rounded-xl p-6 shadow-2xl">
-            <div className="flex justify-between items-center mb-6 border-b border-zinc-800 pb-3">
+          <div className="w-full max-w-md bg-stone-900 border border-stone-800 rounded-xl p-6 shadow-2xl">
+            <div className="flex justify-between items-center mb-6 border-b border-stone-800 pb-3">
               <h3 className="text-lg font-bold">Update Password</h3>
-              <button onClick={() => setIsPasswordModalOpen(false)} className="text-zinc-500 hover:text-white">✕</button>
+              <button onClick={() => setIsPasswordModalOpen(false)} className="text-stone-500 hover:text-white">✕</button>
             </div>
 
             <form onSubmit={handleChangePasswordSubmit} className="space-y-4">
@@ -179,35 +179,35 @@ export default function AdminLayout({
               )}
 
               <div>
-                <label className="block text-xs text-zinc-500 mb-1">Current Password</label>
+                <label className="block text-xs text-stone-500 mb-1">Current Password</label>
                 <input
                   type="password"
                   required
                   value={currentPassword}
                   onChange={(e) => setCurrentPassword(e.target.value)}
-                  className="w-full bg-zinc-950 border border-zinc-800 rounded-lg px-3 py-2 text-sm focus:border-emerald-500 outline-none"
+                  className="w-full bg-[#0d0a08] border border-stone-800 rounded-lg px-3 py-2 text-sm focus:border-orange-500 outline-none text-stone-100"
                 />
               </div>
 
               <div>
-                <label className="block text-xs text-zinc-500 mb-1">New Password</label>
+                <label className="block text-xs text-stone-500 mb-1">New Password</label>
                 <input
                   type="password"
                   required
                   value={newPassword}
                   onChange={(e) => setNewPassword(e.target.value)}
-                  className="w-full bg-zinc-950 border border-zinc-800 rounded-lg px-3 py-2 text-sm focus:border-emerald-500 outline-none"
+                  className="w-full bg-[#0d0a08] border border-stone-800 rounded-lg px-3 py-2 text-sm focus:border-orange-500 outline-none text-stone-100"
                 />
               </div>
               
               <div>
-                <label className="block text-xs text-zinc-500 mb-1">Confirm New Password</label>
+                <label className="block text-xs text-stone-500 mb-1">Confirm New Password</label>
                 <input
                   type="password"
                   required
                   value={confirmPassword}
                   onChange={(e) => setConfirmPassword(e.target.value)}
-                  className="w-full bg-zinc-950 border border-zinc-800 rounded-lg px-3 py-2 text-sm focus:border-emerald-500 outline-none"
+                  className="w-full bg-[#0d0a08] border border-stone-800 rounded-lg px-3 py-2 text-sm focus:border-orange-500 outline-none text-stone-100"
                 />
               </div>
 
@@ -215,14 +215,14 @@ export default function AdminLayout({
                 <button
                   type="button"
                   onClick={() => setIsPasswordModalOpen(false)}
-                  className="px-4 py-2 text-xs font-semibold text-zinc-400 hover:bg-zinc-800 rounded-lg transition"
+                  className="px-4 py-2 text-xs font-semibold text-stone-400 hover:bg-stone-800 rounded-lg transition"
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
                   disabled={loading}
-                  className="bg-emerald-500 text-zinc-950 px-4 py-2 text-xs font-semibold rounded-lg hover:bg-emerald-400 transition disabled:opacity-50"
+                  className="bg-[#e67e22] text-white px-4 py-2 text-xs font-semibold rounded-lg hover:bg-[#d35400] transition disabled:opacity-50"
                 >
                   {loading ? "Saving..." : "Save Changes"}
                 </button>
