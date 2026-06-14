@@ -8,6 +8,7 @@ import image from "../../public/home.png";
 import image2 from "../../public/contact.png";
 // Explicitly handle Next.js StaticImageData typing for the source reference
 const homeHeroSrc = typeof image === 'object' && 'src' in image ? image.src : String(image);
+//this is the api url
 const BACKEND_URL = 'http://localhost:5000';
 
 export default function AddisAbabaMenuPage() {
